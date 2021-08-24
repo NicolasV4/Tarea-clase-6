@@ -1,5 +1,6 @@
 function borrarIntegrantes(){
     const cantidadIntegrantesAEliminar = document.querySelectorAll('.integrante');
+    cantidadIntegrantesAEliminar = cantidadIntegrantesAEliminar.length;
     
     for (let i = 0 ; i <= cantidadIntegrantesAEliminar.lenght; i++){
         $integrantes[i].remove();
@@ -27,4 +28,5 @@ function crearIntegrante(indice){
     const $integrantes = document.querySelector('#integrantes');
     $integrantes.appendChild($div);
 }
+
 

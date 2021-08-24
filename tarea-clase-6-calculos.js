@@ -1,7 +1,7 @@
 function borrarIntegrantes(){
-    const $cantidadIntegrantesAEliminar = document.querySelector('.integrante');
+    const cantidadIntegrantesAEliminar = document.querySelectorAll('.integrante');
     
-    for (let i = 0 ; i <= $cantidadIntegrantesAEliminar.lenght; i++){
+    for (let i = 0 ; i <= cantidadIntegrantesAEliminar.lenght; i++){
         $integrantes[i].remove();
     }
     

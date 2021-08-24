@@ -5,18 +5,18 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente la mayor edad
 
 Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente, borrando los inputs ya creados (investigar cómo en MDN).
 */
+
 const $enviarIntegrante = document.querySelector('#enviar-integrantes')
-const nodoPagina = document.querySelector('body');
-const nuevoInput = document.createElement('input')
 
-$enviarIntegrante.onclick = function(){
-    const $cantidadIntegrantes = (Number(document.querySelector('#cantidad').value))
-    for ( let i = 0 ; i <= $cantidadIntegrantes; i++){
-        nodoPagina.appendChild(nuevoInput);
-        
-    }
-    return false;  
+$enviarIntegrante.onclick = function(event){
+    const $cantidadIntegrantes = document.querySelector('#cantidad-integrantes');
+    const cantidadIntegrantes = Number(($cantidadIntegrantes).value);
 
+    borrarIntegrantes();
+    crearIntegrantes(cantidadIntegrantes);
+
+         
+    event.preventDefault();
 
 }
 
